@@ -21,8 +21,7 @@ public class AutoController {
     }
 
     @GetMapping("/modo/{dia}")
-    public ResponseEntity<String> obtenerModo(@PathVariable String dia) {
-        try {
+    public ResponseEntity<String> obtenerModo(@PathVariable String dia) {try {
             ModoUso modo = autoService.obtenerModoPorDia(dia);
             String resultado = modo.usar();
 
